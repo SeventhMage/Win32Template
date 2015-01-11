@@ -8,7 +8,7 @@
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR lp, int nCmdShow)
 //int main(void)
 {
-	MyApp myApp(nPortSvr);
+	MyApp myApp;
 	myApp.Run();
 	return 0;
 }
