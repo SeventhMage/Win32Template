@@ -142,3 +142,8 @@ void Window::Update()
 	
 }
 
+void Window::Init()
+{
+
+}
+

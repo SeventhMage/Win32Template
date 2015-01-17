@@ -49,7 +49,7 @@ private:
 protected:
 	virtual void AddControl();			//子类需要添加控件时写在这里
 	virtual void Update();
-	
+	virtual void Init();
 //成员变量
 protected:
 	typedef void (Window::*PMSGFUN)(WPARAM wParam, LPARAM lParam);

@@ -64,7 +64,7 @@ unsigned int WINAPI Application::Running(LPVOID lpv)
 		printf("UpdateWindow() error:%d\n", GetLastError());
 		return 0;
 	}	
-	
+	pf->Init();
 	MSG msg;
 	memset(&msg, 0, sizeof(MSG));
 	while (msg.message != WM_QUIT)
