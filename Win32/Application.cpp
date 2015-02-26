@@ -32,6 +32,7 @@ HANDLE Application::ShowWindow(Window *pf)
 		return NULL;
 	}
 	WaitForSingleObject(afInfo.hEvent, INFINITE);
+	CloseHandle(pafInfo->hEvent);
 	return hThread;
 }
 
@@ -51,7 +52,6 @@ unsigned int WINAPI Application::Running(LPVOID lpv)
 	Application *pApp = pafInfo->pApp;
 	
 	SetEvent(pafInfo->hEvent);
-	CloseHandle(pafInfo->hEvent);
 	
 	pf->Create();
 	pf->AddControl();
